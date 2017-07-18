@@ -4,23 +4,23 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-package 'apache2' do
+package 'httpd' do
 	package_name 'httpd'
 	action :install
 end
 
-service 'apache2' do
+service 'httpd' do
 	service_name 'httpd'
 	action [:start, :enable]
 end
 
 package 'mysqld' do
-	package_name 'mariadb'
+	package_name 'mysqld'
 	action :install
 end
 
-service 'mariadb' do
-	service_name 'mariadb'
+service 'mysqld' do
+	service_name 'mysqld'
 	action [:start, :enable]
 end
 
